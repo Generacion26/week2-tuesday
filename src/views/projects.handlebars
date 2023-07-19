@@ -1,2 +1,9 @@
 <h1>Estos son mis proyectos</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, fugiat?</p>
+
+<ul>
+    {{#each projectsData}}
+        <li><a href="/projects/{{this.id}}">{{this.name}}</a></li>
+    {{/each}}
+    
+</ul>

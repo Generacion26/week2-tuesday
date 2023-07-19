@@ -26,6 +26,15 @@ app.engine(
   })
 );
 
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "img-src": ["'self'", "https: data:"],
+    },
+  })
+);
+
 app.use("/", router);
 
 module.exports = app;
